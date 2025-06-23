@@ -5,7 +5,7 @@ app = FastAPI()
 @app.get("/")
 
 async def home():
-    return {"data": "Hello World"}
+    return {"data": "Hello World, let's try to predict earthquakes!"}
 
 import pandas as pd
 #from google.colab import data_table
