@@ -205,7 +205,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Read CSV file with space delimiter
-df = pd.read_csv('/content/Earthquake_Data.csv', delimiter=r'\s+')
+df = pd.read_csv('C:\\Users\\User\\Desktop\\Python\\term 2\\Earthquake_Data.csv', delimiter=r'\s+')
 
 new_column_names = ["Date(YYYY/MM/DD)",  "Time(UTC)", "Latitude(deg)", "Longitude(deg)", "Depth(km)", "Magnitude", 
                     "Magnitude_Category", "No_of_Stations", "Gap", "Close", "RMS", "SRC", "EventID"]
@@ -316,7 +316,7 @@ plt.title('Random Forest Regression Results')
 plt.show()
 
 importances = rf.feature_importances_
-features = ['Latitude', 'Longitude', 'Depth', 'No. of Stations']
+features = ['Latitude', 'Longitude', 'Depth']
 plt.bar(features, importances)
 plt.xlabel('Feature')
 plt.ylabel('Importance')
@@ -339,7 +339,7 @@ plt.legend()
 plt.show()
 
 scores_df = pd.DataFrame(scores)
-display(scores_df)
+print(scores_df)
 
 scores_df[scores_df["mse"] == scores_df["mse"].min()]
      
