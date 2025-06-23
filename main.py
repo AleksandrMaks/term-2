@@ -306,3 +306,33 @@ plt.ylabel('Predicted Magnitude')
 plt.title('Random Forest Regression Results')
 plt.show()
 
+importances = rf.feature_importances_
+features = ['Latitude', 'Longitude', 'Depth', 'No. of Stations']
+plt.bar(features, importances)
+plt.xlabel('Feature')
+plt.ylabel('Importance')
+plt.title('Feature Importance Plot')
+plt.show()
+
+import seaborn as sns
+sns.residplot(x= y_test, y =y_pred, color='orange')
+plt.xlabel('Predicted Magnitude')
+plt.ylabel('Residual')
+plt.title('Residual Plot')
+plt.show()
+
+plt.plot(y_test.index[:20], y_test[:20], color='blue', label='Actual Magnitude')
+plt.plot(y_test.index[:20], y_pred[:20], color='orange', label='Predicted Magnitude')
+plt.xlabel('Index')
+plt.ylabel('Magnitude')
+plt.title('Actual vs. Predicted Line Plot')
+plt.legend()
+plt.show()
+
+scores_df = pd.DataFrame(scores)
+display(scores_df)
+
+scores_df[scores_df["mse"] == scores_df["mse"].min()]
+     
+
+scores_df[scores_df["R^2"] == scores_df["R^2"].max()]
