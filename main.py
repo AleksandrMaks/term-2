@@ -1,3 +1,12 @@
+    
+from fastapi import FastAPI
+
+app = FastAPI()
+@app.get("/")
+
+async def home():
+    return {"data": "Hello World"}
+
 import pandas as pd
 #from google.colab import data_table
 #data_table.enable_dataframe_formatter()
@@ -28,7 +37,7 @@ file_name = 'Earthquake_data_processed.xlsx'
 print('DataFrame is written to Excel File successfully.')
 
 #import sklearn
-from scikit-learn import train_test_split
+from sklearn.model_selection import train_test_split
 
 # Select relevant columns
 X = df[['Latitude(deg)', 'Longitude(deg)', 'Depth(km)', 'No_of_Stations']]
