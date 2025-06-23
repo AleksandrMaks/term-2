@@ -33,7 +33,7 @@ df.info()
 file_name = 'Earthquake_data_processed.xlsx'
   
 # save  excel
-#df.to_excel(file_name)
+df.to_excel(file_name)
 print('DataFrame is written to Excel File successfully.')
 
 #import sklearn
