@@ -1,0 +1,10 @@
+https://missing.csail.mit.edu/2020/course-shell/
+https://missing.csail.mit.edu/2020/shell-tools/
+https://missing.csail.mit.edu/2020/security/
+
+https://sourabhbajaj.com/mac-setup/
+
+
+Anier Velasco Sotomayor 18:54
+https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#meslo-nerd-font-patched-for-powerlevel10k
+https://github.com/romkatv/powerlevel10k?tab=readme-ov-file
