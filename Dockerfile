@@ -1,5 +1,11 @@
-FROM adoptopenjdk/openjdk11:alpine-jre  
-ARG JAR_FILE=target/spring-docker-simple-0.0.1-SNAPSHOT.jar  
-WORKDIR /opt/app  
-COPY ${JAR_FILE} app.jar  
-ENTRYPOINT ["java","-jar","app.jar"]  
+FROM python:3.13-slim-bullseye
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY src/ ./src/
+
+CMD ["python", "-m", "src.bot"]
