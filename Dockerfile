@@ -8,7 +8,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# Create data and logs directories
+# Create data/logs directories
 RUN mkdir -p data logs
 
 CMD ["python", "-m", "main.py"]
